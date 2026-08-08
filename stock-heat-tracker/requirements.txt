@@ -1,0 +1,10 @@
+streamlit>=1.32.0
+pandas>=2.0.0
+plotly>=5.18.0
+pytrends>=4.9.2
+requests>=2.31.0
+urllib3>=1.26,<2
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+rapidfuzz>=3.6.0
+pytest>=8.0.0

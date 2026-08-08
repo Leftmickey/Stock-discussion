@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台股網路熱度排行榜</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --panel-hover: #1c2330;
+    --border: #2d333b;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #f0883e;
+    --up: #ff5252;
+    --down: #26a69a;
+    --bar: linear-gradient(90deg, #f0883e, #ff5252);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 24px 16px 60px;
+  }
+  .container { max-width: 1080px; margin: 0 auto; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  h1 { font-size: 26px; font-weight: 700; }
+  h1 .flame { color: var(--accent); }
+  .generated { color: var(--muted); font-size: 13px; }
+  .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+  .window-switch { display: inline-flex; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .window-switch button {
+    background: transparent; color: var(--muted); border: none;
+    padding: 9px 22px; font-size: 15px; cursor: pointer; font-family: inherit;
+    transition: all .15s;
+  }
+  .window-switch button.active { background: var(--accent); color: #0d1117; font-weight: 700; }
+  .search-box {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    color: var(--text); padding: 9px 14px; font-size: 14px; font-family: inherit; width: 200px;
+  }
+  .search-box:focus { outline: 1px solid var(--accent); }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 12px; overflow: hidden; }
+  thead th {
+    text-align: right; padding: 12px 10px; font-size: 13px; color: var(--muted);
+    border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; white-space: nowrap;
+  }
+  thead th:hover { color: var(--text); }
+  thead th.sorted { color: var(--accent); }
+  thead th:nth-child(1), thead th:nth-child(2) { text-align: left; }
+  tbody td { padding: 11px 10px; text-align: right; font-size: 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  tbody td:nth-child(1), tbody td:nth-child(2) { text-align: left; }
+  tbody tr.stock-row { cursor: pointer; transition: background .1s; }
+  tbody tr.stock-row:hover { background: var(--panel-hover); }
+  .rank { color: var(--muted); font-variant-numeric: tabular-nums; width: 44px; }
+  .rank.top { color: var(--accent); font-weight: 700; }
+  .stock-name { font-weight: 600; }
+  .stock-code { color: var(--muted); font-size: 12.5px; margin-left: 6px; }
+  .market-tag { font-size: 11px; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; margin-left: 6px; }
+  .score-cell { min-width: 150px; }
+  .score-wrap { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+  .score-bar-bg { width: 90px; height: 8px; background: #21262d; border-radius: 4px; overflow: hidden; }
+  .score-bar { height: 100%; background: var(--bar); border-radius: 4px; }
+  .score-num { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 44px; }
+  .pos { color: var(--up); }
+  .neg { color: var(--down); }
+  .muted { color: var(--muted); }
+  .detail-row td { background: #10151d; padding: 14px 18px; white-space: normal; }
+  .detail-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 760px) { .detail-cols { grid-template-columns: 1fr; } }
+  .detail-cols h4 { font-size: 13px; color: var(--accent); margin-bottom: 8px; }
+  .detail-cols ul { list-style: none; }
+  .detail-cols li { margin-bottom: 6px; font-size: 13.5px; line-height: 1.5; }
+  .detail-cols a { color: var(--text); text-decoration: none; }
+  .detail-cols a:hover { color: var(--accent); text-decoration: underline; }
+  .comment-count { color: var(--muted); font-size: 12px; }
+  footer { margin-top: 22px; color: var(--muted); font-size: 12.5px; line-height: 1.8; }
+  footer a { color: var(--muted); }
+  .no-data { padding: 40px; text-align: center; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1><span class="flame">🔥</span> 台股網路熱度排行榜</h1>
+    <span class="generated" id="generated"></span>
+  </header>
+  <p class="subtitle">PTT Stock 板討論 × Google News 曝光 × 成交量變化,綜合計算熱度分數(點擊列可展開熱門文章與新聞)</p>
+
+  <div class="toolbar">
+    <div class="window-switch" id="windowSwitch"></div>
+    <input class="search-box" id="searchBox" type="text" placeholder="篩選名稱或代號…">
+  </div>
+
+  <table id="heatTable">
+    <thead>
+      <tr>
+        <th data-key="rank">#</th>
+        <th data-key="name">標的</th>
+        <th data-key="score" class="sorted">熱度分數 ▼</th>
+        <th data-key="ptt_articles">PTT 文章</th>
+        <th data-key="ptt_comments">PTT 留言</th>
+        <th data-key="news_count">新聞則數</th>
+        <th data-key="vol_avg_value">日均成交(億)</th>
+        <th data-key="vol_change_pct">量能變化</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+  <footer>
+    資料來源:PTT Stock 板(經 pttweb.cc,標題搜尋)、Google News RSS、臺灣證券交易所 / 櫃買中心。<br>
+    說明:PTT 統計僅比對文章「標題」含股票名稱或代號;新聞則數上限 100(標示 <b>+</b> 表示實際更多);量能變化 = 視窗內日均成交金額相對前一期的變化率。<br>
+    本工具僅供參考,不構成投資建議。
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  const data = window.HEAT_DATA;
+  const tbody = document.getElementById('tbody');
+  const windowSwitch = document.getElementById('windowSwitch');
+  const searchBox = document.getElementById('searchBox');
+
+  if (!data || !data.windows) {
+    tbody.innerHTML = '<tr><td colspan="8" class="no-data">尚無資料,請先執行 python3 src/main.py 產生 data.js</td></tr>';
+    return;
+  }
+
+  const windows = Object.keys(data.windows).map(Number).sort((a, b) => a - b);
+  let currentWindow = windows.includes(7) ? 7 : windows[0];
+  let sortKey = 'score';
+  let sortDesc = true;
+  let filterText = '';
+  let expandedCode = null;
+
+  document.getElementById('generated').textContent = '更新時間:' + (data.generated_at || '').replace('T', ' ').slice(0, 16);
+
+  windows.forEach(w => {
+    const btn = document.createElement('button');
+    btn.textContent = '近 ' + w + ' 天';
+    btn.dataset.w = w;
+    if (w === currentWindow) btn.classList.add('active');
+    btn.onclick = () => {
+      currentWindow = w;
+      windowSwitch.querySelectorAll('button').forEach(b => b.classList.toggle('active', Number(b.dataset.w) === w));
+      render();
+    };
+    windowSwitch.appendChild(btn);
+  });
+
+  document.querySelectorAll('thead th').forEach(th => {
+    th.onclick = () => {
+      const key = th.dataset.key;
+      if (sortKey === key) { sortDesc = !sortDesc; }
+      else { sortKey = key; sortDesc = (key !== 'rank' && key !== 'name'); }
+      render();
+    };
+  });
+
+  searchBox.oninput = () => { filterText = searchBox.value.trim(); render(); };
+
+  function fmt(n, digits) {
+    if (n === null || n === undefined) return '<span class="muted">—</span>';
+    return Number(n).toLocaleString('zh-TW', { maximumFractionDigits: digits === undefined ? 1 : digits });
+  }
+
+  function fmtDate(ts) {
+    const d = new Date(ts * 1000);
+    return (d.getMonth() + 1) + '/' + d.getDate();
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function detailHtml(code) {
+    const d = (data.details || {})[code] || {};
+    const ptt = d.ptt_top || [];
+    const news = d.news_top || [];
+    const pttList = ptt.length
+      ? ptt.map(a => '<li><a href="' + esc(a.url) + '" target="_blank" rel="noopener">' + esc(a.title) + '</a> <span class="comment-count">' + fmtDate(a.ts) + ' · ' + a.comments + ' 留言</span></li>').join('')
+      : '<li class="muted">近 30 天無標題相符的文章</li>';
+    const newsList = news.length
+      ? news.map(n => '<li><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.title) + '</a> <span class="comment-count">' + fmtDate(n.ts) + '</span></li>').join('')
+      : '<li class="muted">無近期新聞</li>';
+    return '<div class="detail-cols"><div><h4>PTT 熱門文章(近 30 天,依留言數)</h4><ul>' + pttList + '</ul></div>' +
+           '<div><h4>最新新聞</h4><ul>' + newsList + '</ul></div></div>';
+  }
+
+  function render() {
+    let rows = (data.windows[String(currentWindow)] || []).slice();
+    if (filterText) {
+      rows = rows.filter(r => r.name.includes(filterText) || r.code.includes(filterText));
+    }
+    rows.sort((a, b) => {
+      let va = a[sortKey], vb = b[sortKey];
+      if (va === null || va === undefined) va = -Infinity;
+      if (vb === null || vb === undefined) vb = -Infinity;
+      if (typeof va === 'string') return sortDesc ? vb.localeCompare(va) : va.localeCompare(vb);
+      return sortDesc ? vb - va : va - vb;
+    });
+
+    document.querySelectorAll('thead th').forEach(th => {
+      const base = th.textContent.replace(/ [▼▲]$/, '');
+      th.classList.toggle('sorted', th.dataset.key === sortKey);
+      th.textContent = th.dataset.key === sortKey ? base + (sortDesc ? ' ▼' : ' ▲') : base;
+    });
+
+    tbody.innerHTML = '';
+    rows.forEach(r => {
+      const tr = document.createElement('tr');
+      tr.className = 'stock-row';
+      const chg = r.vol_change_pct;
+      const chgHtml = chg === null || chg === undefined
+        ? '<span class="muted">—</span>'
+        : '<span class="' + (chg >= 0 ? 'pos' : 'neg') + '">' + (chg >= 0 ? '+' : '') + chg + '%</span>';
+      tr.innerHTML =
+        '<td class="rank' + (r.rank <= 3 ? ' top' : '') + '">' + r.rank + '</td>' +
+        '<td><span class="stock-name">' + esc(r.name) + '</span><span class="stock-code">' + r.code + '</span>' +
+          '<span class="market-tag">' + (r.market === 'tpex' ? '上櫃' : '上市') + '</span></td>' +
+        '<td class="score-cell"><div class="score-wrap"><div class="score-bar-bg"><div class="score-bar" style="width:' + Math.max(1, r.score) + '%"></div></div><span class="score-num">' + r.score.toFixed(1) + '</span></div></td>' +
+        '<td>' + fmt(r.ptt_articles, 0) + '</td>' +
+        '<td>' + fmt(r.ptt_comments, 0) + '</td>' +
+        '<td>' + fmt(r.news_count, 0) + (r.news_saturated ? '<b class="pos">+</b>' : '') + '</td>' +
+        '<td>' + fmt(r.vol_avg_value, 2) + '</td>' +
+        '<td>' + chgHtml + '</td>';
+      tr.onclick = () => {
+        expandedCode = (expandedCode === r.code) ? null : r.code;
+        render();
+      };
+      tbody.appendChild(tr);
+
+      if (expandedCode === r.code) {
+        const dtr = document.createElement('tr');
+        dtr.className = 'detail-row';
+        dtr.innerHTML = '<td colspan="8">' + detailHtml(r.code) + '</td>';
+        tbody.appendChild(dtr);
+      }
+    });
+
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="8" class="no-data">沒有符合的標的</td></tr>';
+    }
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

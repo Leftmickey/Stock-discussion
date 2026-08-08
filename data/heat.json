@@ -1,0 +1,301 @@
+{
+ "generated_at": "2026-08-08T21:31:13+08:00",
+ "windows": {
+  "1": [
+   {
+    "code": "2330",
+    "name": "台積電",
+    "market": "twse",
+    "ptt_articles": 0,
+    "ptt_comments": 0,
+    "news_count": 27,
+    "news_saturated": false,
+    "vol_avg_value": 579.47,
+    "vol_change_pct": -4.4,
+    "score": 100.0,
+    "rank": 1
+   },
+   {
+    "code": "2454",
+    "name": "聯發科",
+    "market": "twse",
+    "ptt_articles": 0,
+    "ptt_comments": 0,
+    "news_count": 2,
+    "news_saturated": false,
+    "vol_avg_value": 259.01,
+    "vol_change_pct": -9.2,
+    "score": 35.9,
+    "rank": 2
+   },
+   {
+    "code": "2383",
+    "name": "台光電",
+    "market": "twse",
+    "ptt_articles": 0,
+    "ptt_comments": 0,
+    "news_count": 1,
+    "news_saturated": false,
+    "vol_avg_value": 71.81,
+    "vol_change_pct": -27.0,
+    "score": 2.2,
+    "rank": 3
+   }
+  ],
+  "7": [
+   {
+    "code": "2330",
+    "name": "台積電",
+    "market": "twse",
+    "ptt_articles": 5,
+    "ptt_comments": 964,
+    "news_count": 99,
+    "news_saturated": false,
+    "vol_avg_value": 771.67,
+    "vol_change_pct": -36.1,
+    "score": 80.0,
+    "rank": 1
+   },
+   {
+    "code": "2454",
+    "name": "聯發科",
+    "market": "twse",
+    "ptt_articles": 3,
+    "ptt_comments": 309,
+    "news_count": 83,
+    "news_saturated": false,
+    "vol_avg_value": 407.83,
+    "vol_change_pct": 10.8,
+    "score": 68.2,
+    "rank": 2
+   },
+   {
+    "code": "2383",
+    "name": "台光電",
+    "market": "twse",
+    "ptt_articles": 0,
+    "ptt_comments": 0,
+    "news_count": 17,
+    "news_saturated": false,
+    "vol_avg_value": 132.46,
+    "vol_change_pct": 6.4,
+    "score": 23.3,
+    "rank": 3
+   }
+  ],
+  "30": [
+   {
+    "code": "2330",
+    "name": "台積電",
+    "market": "twse",
+    "ptt_articles": 76,
+    "ptt_comments": 10878,
+    "news_count": 102,
+    "news_saturated": true,
+    "vol_avg_value": 979.44,
+    "vol_change_pct": 3.2,
+    "score": 100.0,
+    "rank": 1
+   },
+   {
+    "code": "2454",
+    "name": "聯發科",
+    "market": "twse",
+    "ptt_articles": 8,
+    "ptt_comments": 870,
+    "news_count": 102,
+    "news_saturated": true,
+    "vol_avg_value": 360.98,
+    "vol_change_pct": -34.0,
+    "score": 34.6,
+    "rank": 2
+   },
+   {
+    "code": "2383",
+    "name": "台光電",
+    "market": "twse",
+    "ptt_articles": 3,
+    "ptt_comments": 169,
+    "news_count": 50,
+    "news_saturated": true,
+    "vol_avg_value": 117.36,
+    "vol_change_pct": -1.9,
+    "score": 33.3,
+    "rank": 3
+   }
+  ]
+ },
+ "details": {
+  "2330": {
+   "ptt_top": [
+    {
+     "title": "[新聞] 台積電法說會／魏哲家宣布美國亞歷桑那",
+     "comments": 908,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1784184102.A.B58",
+     "ts": 1784184102.0
+    },
+    {
+     "title": "[情報] 2330台積電 Q2 27.25",
+     "comments": 808,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1784179918.A.1A0",
+     "ts": 1784179918.0
+    },
+    {
+     "title": "[情報] 台積電 2026/7 法說會直播",
+     "comments": 742,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1784180476.A.749",
+     "ts": 1784180476.0
+    },
+    {
+     "title": "[新聞] 台積電CoWoS勁敵！英特爾先進封裝良率逼",
+     "comments": 417,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785768906.A.EB0",
+     "ts": 1785768906.0
+    },
+    {
+     "title": "[新聞] 快訊／台積電猛飆漲停！台股飆逾3000點　",
+     "comments": 383,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785473208.A.DD9",
+     "ts": 1785473208.0
+    }
+   ],
+   "news_top": [
+    {
+     "title": "台積電赴美投資會掏空台灣？經濟學家曝「擠壓策略」：任務是跑得比對手快 | 林子靖 | 新聞 - 風傳媒",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5zM0llYW44TWJCZWFaZzh1UmpZZUVhMy1BS0pGdXRSOHVsUUlWa1pWZi1QQWRxTVlZVDB0X2NXOXpHOHF6Z215OV9vNURGZw?oc=5",
+     "ts": 1786195607.0
+    },
+    {
+     "title": "文組生不能進台積電或外商巨頭？16年科技主管破解迷思：43%高薪賽道根本不用寫程式| 熱門話題| 要聞 - 經濟日報",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5mb2tnYlk3b2RtZmtxaDhHTnVna0x1SGtjS01malA0NVpjdlk2N01pNDItV0Z2SG90dFJvSUMxLTdXNVBGM1ZobVR5YnJJc2NWbE9CZFdmNk5TeGNIRW52aFE1cFNNdHZscHh3aF9IeFVxNWNKX1FZ?oc=5",
+     "ts": 1786194048.0
+    },
+    {
+     "title": "「被騙的只有慈濟，台積電沒有啊！」 陳沂質疑陳時中：當大家都集體失憶？ - 中時新聞網",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1JUGRRczJrV09TLXo0NE1CbFZMa2swOXVha3NLYWxFdE01ZktSdGFnaDlDRnZtamZUaFF6dlBsUERQU1pwOVQzZ0RoMFVRY2o5OGVzX09JQkhpS1FtZVZHX3QteEZnTmJoUFh5eXF3?oc=5",
+     "ts": 1786188824.0
+    },
+    {
+     "title": "小編下班聊點錢》存零股該選誰？本週10大零股人氣榜 0050重返百元竟掉榜 新增2檔噴出千金股 - 旺得富理財網",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBtVE1NZktYZk9QdmZMVWdrcThEeXpTaWs2cHZoUGJ1T25hYUxHMDhSRm4wTHpNRFBZMW9yMElBN1ZqdzNOSzItNXg1cUxUc1dPaDZSdlV0SkpxdlR2MkZIVGJvZ2s5dHI4NVE?oc=5",
+     "ts": 1786187020.0
+    },
+    {
+     "title": "台積電、聯發科不再怕關禁閉？台股處置新制8/10上路！處置縮至5天、2分鐘撮合 - Yahoo股市",
+     "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxOelJ3UUR5VzBUejRqRlVOZXB1NGRDV2s4RUN0dHI3eUJ1R1N4RW5oRjZIWnZUWnhtMllRcV9CQ0Yxb1RJUnFwTGZWVjNXd3ZsWnZCSnVvcVJ5QXI5RXdPUm44UTNtSWMyLWRlLVBrM0cyN0h1YkIxa3RibHFtYkFZT2FEd29VMnoyMjdDQUNwQjZ3eU1JbEZUZEY2d3p1aG9VZ016Yi1xTDhZcXdCQm5uVVIxZEE5SGpPeWdJS0EtaHBNd3VmVTRHZEVXQnA5YkFGTlFpaGREelVsUkZWRTVWcnZWWTNoSldFa0xLRHFEay1NRGU1bFVFemFKbXR3YmQ2R01JT09PdEdsSi1ZbWhpRU41ZHpHUHp0Z3N5MXZaSE1EOEYwUXhHejJfb0lYcF9Zd194bms5cHY0blB5a1ZYM2MwSTJIUWZOZjNwQmd4M2puS2txSU8ydG4tNFhONVkyRENlRHN6LWxHQ0xKSUl3THVVR1Y4Qnk3WHhteHU4ZXZtOEVFdjZ4b3drRGVYN1A0Q0E?oc=5",
+     "ts": 1786184100.0
+    }
+   ]
+  },
+  "2383": {
+   "ptt_top": [
+    {
+     "title": "[新聞] 焦點股》台光電：Q2獲利超預期 外資喊10",
+     "comments": 90,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785409891.A.1EE",
+     "ts": 1785409891.0
+    },
+    {
+     "title": "[情報] 2383 台光電 115年Q2:27.56 累計:42.46",
+     "comments": 50,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785314694.A.A7D",
+     "ts": 1785314694.0
+    },
+    {
+     "title": "[標的] 2383台光電 高估值股票預備腰斬空",
+     "comments": 29,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785210209.A.B3F",
+     "ts": 1785210209.0
+    }
+   ],
+   "news_top": [
+    {
+     "title": "台光電、台燿衝高震盪…CCL族群還能上車？鄭廳宜點名「這檔隱藏版CPO股」：每股盈餘看300元，性價比更高！ - 優分析UAnalyze",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5wY3NrTmkzTFRuWHlmMmdHSmNmSkt5dmFEVEZsZDNodVkxbC1qb21PSm5fSTcyejFYaGhVWUNSN184LVpPRl9jcVZZVHFmanh6QXlhMlVn?oc=5",
+     "ts": 1786194000.0
+    },
+    {
+     "title": "《台北股市》注意股：7日73檔信驊.富世達.光寶科.台光電.南亞科等- 上市櫃 - 旺得富理財網",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9STDVCeUMwNDNXSWczUkVlVlBWOExaVmNqdmp3VXRKbUVBa0x0dTM4bXYtWGpaeW12Y3BrSWo2N3B0VDhYRFZPRTVMOW1LS0lKRzlCU1paMC00RDdBNkJmS0pGbkgxMkZTN0E?oc=5",
+     "ts": 1786060887.0
+    },
+    {
+     "title": "史瓦帝尼總理訪聚恆，考察台灣光電、儲能與漁電共生成果 | 科技新報 - LINE TODAY",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxM1Y1ZFVTUW1CVmJYWkNWanVMYjBscC0wTDNaNDY1VEVySnpLTjRBQk5DTmpZX0V2ajdPUFRFSUdUZlZxV2J2TWtsSnZwU0RmS0dGeDhB?oc=5",
+     "ts": 1786060622.0
+    },
+    {
+     "title": "熱門股／7月營收寫新高！聯茂亮燈漲停、5天大漲逾5成台光電翻紅走高| 產經 - 非凡新聞台",
+     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzVFVyZFVpLVdIN29yOFJjSFBLUFJqQlFCOGpsS2FKY0x0Mi1oc3E3bHJNMTdkMGYxVTF1aU5kdVNvaTNtSEphNWlNaVhqeGxORjhleHN4Mzc4blJPQWJXbQ?oc=5",
+     "ts": 1786032261.0
+    },
+    {
+     "title": "PCB、CCL迎瘋狂起飛期！年成長率飆上161％ 金像電、台光電、臻鼎...高盛喊買這11檔目標價完整看- 上市櫃 - 旺得富理財網",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9lZVI1TGJfa25aWXZabklRUnpJWW9nRnVqanFlS1VCR2xNU1dvOE9jVllUZ0NYVGZqUmJhcHRaaEVLc1dXa0k5ZDNodDloTGp0a1NRS001SzAtY3hmRUM4MFlIb2VCNHpYb3c?oc=5",
+     "ts": 1785986483.0
+    }
+   ]
+  },
+  "2454": {
+   "ptt_top": [
+    {
+     "title": "[情報] 2454聯發科 115年6月營收",
+     "comments": 262,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1783673783.A.25F",
+     "ts": 1783673783.0
+    },
+    {
+     "title": "[新聞] 手機難以銷售，高通與聯發科的晶片出貨量均暴跌超過25%",
+     "comments": 150,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785759532.A.2AF",
+     "ts": 1785759532.0
+    },
+    {
+     "title": "[情報] 2454 聯發科 115年Q2:15.28 累計:30.44",
+     "comments": 131,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785494815.A.9C0",
+     "ts": 1785494815.0
+    },
+    {
+     "title": "[新聞] 聯發科6月報捷！營收衝580億元、第二季超",
+     "comments": 120,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1783786913.A.B67",
+     "ts": 1783786913.0
+    },
+    {
+     "title": "[標的] 2454 聯發科 積少成多",
+     "comments": 82,
+     "url": "https://www.pttweb.cc/bbs/Stock/M.1785694517.A.51A",
+     "ts": 1785694517.0
+    }
+   ],
+   "news_top": [
+    {
+     "title": "台積電、聯發科不再怕關禁閉？台股處置新制8/10上路！處置縮至5天、2分鐘撮合 - Yahoo股市",
+     "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxOelJ3UUR5VzBUejRqRlVOZXB1NGRDV2s4RUN0dHI3eUJ1R1N4RW5oRjZIWnZUWnhtMllRcV9CQ0Yxb1RJUnFwTGZWVjNXd3ZsWnZCSnVvcVJ5QXI5RXdPUm44UTNtSWMyLWRlLVBrM0cyN0h1YkIxa3RibHFtYkFZT2FEd29VMnoyMjdDQUNwQjZ3eU1JbEZUZEY2d3p1aG9VZ016Yi1xTDhZcXdCQm5uVVIxZEE5SGpPeWdJS0EtaHBNd3VmVTRHZEVXQnA5YkFGTlFpaGREelVsUkZWRTVWcnZWWTNoSldFa0xLRHFEay1NRGU1bFVFemFKbXR3YmQ2R01JT09PdEdsSi1ZbWhpRU41ZHpHUHp0Z3N5MXZaSE1EOEYwUXhHejJfb0lYcF9Zd194bms5cHY0blB5a1ZYM2MwSTJIUWZOZjNwQmd4M2puS2txSU8ydG4tNFhONVkyRENlRHN6LWxHQ0xKSUl3THVVR1Y4Qnk3WHhteHU4ZXZtOEVFdjZ4b3drRGVYN1A0Q0E?oc=5",
+     "ts": 1786184100.0
+    },
+    {
+     "title": "高通、聯發科1H26手機AP出貨年減逾25% 紫光展銳靠低價優勢逆勢成長 - DIGITIMES",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaXp6akpxb2RoanBhSWQ4Tkp3bmd3X3NGS1BpYzJOcDBMMzJpeENrQXJQN01KakkyMVFoQjlRdjBqcFFMSU9kVEZZWUhZWmtEWWNxeW80anJ5QjhtXzBhcDFhQnk4c3pNUmxFcmpTMEdnXzNRNGpSQ2NQSS1maXBkeEZMM0JmZVM2SmxhOWtB?oc=5",
+     "ts": 1786129469.0
+    },
+    {
+     "title": "股價跌近4成反成機會？聯發科押注AI ASIC　法人看2027年EPS挑戰150元 - 經濟日報",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBCWjFHc0ljckVlOU1vREVIYzZQWi1UUG8yVk1LMWJPd0tUbU9KMG1RY3JJU1BXVWlXcjE1SHFJVTV3Q1VacWcwclc1UFNodUh3eUd1RU50ZmcwZ9IBX0FVX3lxTE8tTHZZaFVHOEZUM2IzNU1mMXo3dHVNcTdZWjFaSFhGbVZWc1Nkb1JmX25xV2lUMVpkOHBVWGw1ZVZ5cTRXWWE5Y1JGWnMxODZpR3A0N3kxZWdIUlpzS2NF?oc=5",
+     "ts": 1786100347.0
+    },
+    {
+     "title": "聯發科終於證實 ASIC 案件採用英特爾 EMIB-T 先進封裝 - 經濟日報",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1oaW54dktOT2tFd3V0TkptUTNTdTVUcFFLUEtHSUNpOXo2Q3VET3l1LUZ3WG5heUNlNEZFZGlZWWo4bU1xUmw2VGFpSHBrYXhoQzk3Mm1BQzVPd9IBX0FVX3lxTFBIbjkxbnYzSGFsQmdnNUIyMHJINHAzdVExdldQRjhiOEpkSkY0b0dSMGFTZ3ZKd0dleTg5M3NpZTJLT3NobzdJUkkxcVlfcEdWSmJMSlc2Uk1RSFlaQ0ZF?oc=5",
+     "ts": 1786093200.0
+    },
+    {
+     "title": "「AI 經典賽」重新開打？鴻海、聯發科等權值股都重新站回季線 - 經濟日報",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1MWxtNnlYM0VaR3JYWTZXR0tjLVc2aXVXNXR5WUZTSE9XWXRoVnFkLTNVNlczT2FQN2Nxang3QzR0Q0VMNldaYjlvbXRLWjZqVnhnTV9mN2Rmd9IBX0FVX3lxTE0zejVURGs2OVZpd3FFZHdtTWF1TjY0Tkh4Y3JaSU1HRndxZU5lTkc3c1lmbnpFS3hKQ1gtR3czaUloMmRNOEFVV29iTmFRTlV3cWJpS3BaMjZEUkY1c200?oc=5",
+     "ts": 1786093200.0
+    }
+   ]
+  }
+ }
+}

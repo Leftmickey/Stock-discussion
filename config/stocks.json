@@ -1,0 +1,41 @@
+{
+  "_說明": {
+    "name": "股票名稱(顯示用)",
+    "code": "股票代號",
+    "market": "twse = 上市(證交所), tpex = 上櫃(櫃買中心)",
+    "ptt_queries": "選填。PTT 標題搜尋關鍵字清單,不填則預設為 [name, code]。名稱有歧義時建議自訂(例如「世界」改用「世界先進」)",
+    "news_query": "選填。Google News 搜尋關鍵字,不填則預設為 name"
+  },
+  "stocks": [
+    { "name": "台積電", "code": "2330", "market": "twse" },
+    { "name": "台光電", "code": "2383", "market": "twse" },
+    { "name": "聯發科", "code": "2454", "market": "twse" },
+    { "name": "欣興", "code": "3037", "market": "twse" },
+    { "name": "國巨", "code": "2327", "market": "twse" },
+    { "name": "旺矽", "code": "6223", "market": "tpex" },
+    { "name": "台達電", "code": "2308", "market": "twse" },
+    { "name": "智邦", "code": "2345", "market": "twse" },
+    { "name": "聯電", "code": "2303", "market": "twse" },
+    { "name": "奇鋐", "code": "3017", "market": "twse" },
+    { "name": "台燿", "code": "6274", "market": "tpex" },
+    { "name": "日月光投控", "code": "3711", "market": "twse", "ptt_queries": ["日月光", "3711"], "news_query": "日月光" },
+    { "name": "南電", "code": "8046", "market": "twse" },
+    { "name": "創意", "code": "3443", "market": "twse", "news_query": "創意電子" },
+    { "name": "致茂", "code": "2360", "market": "twse" },
+    { "name": "川湖", "code": "2059", "market": "twse" },
+    { "name": "華邦電", "code": "2344", "market": "twse" },
+    { "name": "鴻海", "code": "2317", "market": "twse" },
+    { "name": "金像電", "code": "2368", "market": "twse" },
+    { "name": "穎崴", "code": "6515", "market": "twse" },
+    { "name": "中信金", "code": "2891", "market": "twse" },
+    { "name": "南亞科", "code": "2408", "market": "twse" },
+    { "name": "臻鼎-KY", "code": "4958", "market": "twse", "ptt_queries": ["臻鼎", "4958"], "news_query": "臻鼎" },
+    { "name": "信驊", "code": "5274", "market": "tpex" },
+    { "name": "景碩", "code": "3189", "market": "twse" },
+    { "name": "聯亞", "code": "3081", "market": "tpex", "news_query": "聯亞光電" },
+    { "name": "高力", "code": "8996", "market": "twse" },
+    { "name": "世界", "code": "5347", "market": "tpex", "ptt_queries": ["世界先進", "5347"], "news_query": "世界先進" },
+    { "name": "廣達", "code": "2382", "market": "twse" },
+    { "name": "鴻勁", "code": "7769", "market": "twse" }
+  ]
+}

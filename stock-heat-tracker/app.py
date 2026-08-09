@@ -206,11 +206,23 @@ def page_detail(conn):
         unsafe_allow_html=True,
     )
 
-    c1, c2, c3 = st.columns([2, 1, 1])
+    range_options = {
+        "近 1 天": 1,
+        "近 7 天": 7,
+        "近 30 天": 30,
+        "近 60 天": 60,
+        "近 120 天": 120,
+    }
+    c1, c2, c3 = st.columns([2, 1.4, 1])
     with c1:
         chosen = st.selectbox("選擇標的", options, index=idx)
     with c2:
-        days = st.selectbox("曲線區間", [7, 30], index=0)
+        range_label = st.selectbox(
+            "曲線區間",
+            list(range_options.keys()),
+            index=1,
+        )
+        days = range_options[range_label]
     with c3:
         st.write("")
         st.write("")

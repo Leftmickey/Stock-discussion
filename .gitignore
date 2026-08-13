@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# 資料庫、HTML 快取與日誌屬於執行產物，不進版控
+data/
+!data/.gitkeep

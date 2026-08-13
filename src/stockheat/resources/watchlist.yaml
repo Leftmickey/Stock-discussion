@@ -1,0 +1,34 @@
+# 預設自選清單。首次建庫時寫入資料庫，之後可在儀表板上增刪。
+# note 僅供對照參考，實際名稱以交易所主檔為準。
+
+watchlist:
+  - { symbol: "2330", note: "台積電" }
+  - { symbol: "2383", note: "台光電" }
+  - { symbol: "2454", note: "聯發科" }
+  - { symbol: "3037", note: "欣興" }
+  - { symbol: "2327", note: "國巨*" }
+  - { symbol: "6223", note: "旺矽" }
+  - { symbol: "2308", note: "台達電" }
+  - { symbol: "2345", note: "智邦" }
+  - { symbol: "2303", note: "聯電" }
+  - { symbol: "3017", note: "奇鋐" }
+  - { symbol: "6274", note: "台燿" }
+  - { symbol: "3711", note: "日月光投控" }
+  - { symbol: "8046", note: "南電" }
+  - { symbol: "3443", note: "創意" }
+  - { symbol: "2360", note: "致茂" }
+  - { symbol: "2059", note: "川湖" }
+  - { symbol: "2344", note: "華邦電" }
+  - { symbol: "2317", note: "鴻海" }
+  - { symbol: "2368", note: "金像電" }
+  - { symbol: "6515", note: "穎崴" }
+  - { symbol: "2891", note: "中信金" }
+  - { symbol: "2408", note: "南亞科" }
+  - { symbol: "4958", note: "臻鼎-KY" }
+  - { symbol: "5274", note: "信驊" }
+  - { symbol: "3189", note: "景碩" }
+  - { symbol: "3081", note: "聯亞" }
+  - { symbol: "8996", note: "高力" }
+  - { symbol: "5347", note: "世界" }
+  - { symbol: "2382", note: "廣達" }
+  - { symbol: "7769", note: "鴻勁" }
